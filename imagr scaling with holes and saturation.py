@@ -10,7 +10,7 @@ def scale(img,x,y):
     for i in range(h):
         for j in range(w):
             p=s.dot(np.array([i,j]))
-            new_i,new_j=np.round(p[0]),np.round(p[1])
+            new_i,new_j=np.floor(p[0]),np.floor(p[1])
             img2[new_i,new_j]=img[i,j]
     return img2
 img=cv2.imread(r"PATH")#PASTE IMAGE PATH
