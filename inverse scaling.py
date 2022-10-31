@@ -14,6 +14,6 @@ def scale(img,x,y):
             i,j=np.floor(p[0]),np.floor(p[1])
             img2[new_i,new_j]=img[int(i),int(j)]
     return img2
-img=cv2.imread(r"C:\Users\ravij\Downloads\lotus.jpg")
+img=cv2.imread(r"PATH")#replace PATH with image path
 img2=scale(img,2,2)
 ply.imshow(img2[:,:,::-1])
