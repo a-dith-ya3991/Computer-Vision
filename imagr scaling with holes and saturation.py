@@ -14,5 +14,5 @@ def scale(img,x,y):
             img2[new_i,new_j]=img[i,j]
     return img2
 img=cv2.imread(r"PATH")#PASTE IMAGE PATH
-img2=scale(img,0.2,0.2)
+img2=scale(img,2,2)
 ply.imshow(img2[:,:,::-1])
