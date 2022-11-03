@@ -9,7 +9,7 @@ def rot(img,angle):
                 [si,co]])
     sh,sw=img.shape[0],img.shape[1]#source iumage height , width
     corners=np.array([[0,0],[0,sw-1],[sh-1,0],[sh-1,sw-1]])
-    newcord=m.dot(corners.T)#here we take transpose because to cnahge dimensions
+    newcord=m.dot(corners.T)#here we take transpose because to change dimensions
     rmin,cmin=np.floor(min(newcord[0])),np.floor(min(newcord[1]))
     rmax,cmax=np.ceil(max(newcord[0])),np.ceil(max(newcord[1]))
     dh=np.int32(rmax-rmin+1)#destination image height,width
@@ -25,8 +25,6 @@ img=cv2.imread(r"PATH")#replace "PATH" with image path
 n=int(input("enter rotation degree:-"))
 img2=rot(img,n)
 fig,ax=pyp.subplots(1,2)
-#ax[0].axis("off")
 ax[0].imshow(img[:,:,::-1])
-#ax[1].axis("off")
 ax[1].imshow(img2[:,:,::-1])
 
