@@ -64,7 +64,7 @@ def transform(img,m):
     m_inv=np.linalg.inv(m)
     img2=np.zeros((abs(h),abs(w),3),dtype="uint8")
     for newi in range(rmin,rmax):
-        for newj in range(cmin,1920):
+        for newj in range(cmin,cmax):
             p=m_inv.dot(np.array([newi,newj]))
             i,j=p[0],p[1]
             if i<=-1 or i>=img.shape[0]-1 or j<=-1 or j>=img.shape[1]-1:
